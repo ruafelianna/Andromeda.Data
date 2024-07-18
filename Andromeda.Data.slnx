@@ -4,4 +4,5 @@
     <File Path=".gitignore" />
   </Folder>
   <Project Path="Andromeda.Data.Context.Abstractions\Andromeda.Data.Context.Abstractions.csproj" />
+  <Project Path="Andromeda.Data.Context\Andromeda.Data.Context.csproj" />
 </Solution>
