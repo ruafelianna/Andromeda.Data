@@ -16,4 +16,12 @@
     <PackageVersion>1.0.0-rc</PackageVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Andromeda.Data.Context.Abstractions\Andromeda.Data.Context.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
