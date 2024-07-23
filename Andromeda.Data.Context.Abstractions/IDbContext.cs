@@ -125,5 +125,11 @@ namespace Andromeda.Data.Context.Abstractions
 
         Task RollbackTransactionAsync(
             CancellationToken cancellationToken = default);
+
+        IQueryable<TResult> SqlQuery<TResult>(
+            FormattableString sql);
+
+        IQueryable<TResult> SqlQueryRaw<TResult>(
+            string sql, params object[] parameters);
     }
 }

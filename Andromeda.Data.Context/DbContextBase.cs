@@ -1,6 +1,8 @@
 using Andromeda.Data.Context.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -39,5 +41,11 @@ namespace Andromeda.Data.Context
 
         public Task RollbackTransactionAsync(CancellationToken cancellationToken = default)
             => Database.RollbackTransactionAsync(cancellationToken);
+
+        public IQueryable<TResult> SqlQuery<TResult>(FormattableString sql)
+            => Database.SqlQuery<TResult>(sql);
+
+        public IQueryable<TResult> SqlQueryRaw<TResult>(string sql, params object[] parameters)
+            => Database.SqlQueryRaw<TResult>(sql, parameters);
     }
 }
